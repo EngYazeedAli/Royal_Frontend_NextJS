@@ -1,40 +1,84 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Employee Attendance Web Application
+
+## Introduction
+
+This web application is designed to facilitate the management of employee attendance for a small organization. The system includes features for employees to check in and check out, with specific business rules and validations to ensure accurate attendance tracking. Additionally, administrators can manage employee records and view attendance details.
+
+## Entities
+
+### Employee
+
+- Represents an individual within the organization.
+- Each employee has a unique identifier, a name, and other relevant details.
+
+### Attendance
+
+- Records the check-in and check-out events for each employee.
+- Includes timestamps and justification for attendance flags.
+
+## Business Rules
+
+- Work hours are from 7:00 am to 4:00 pm, with a lunch break from 12:00 pm to 1:00 pm.
+- Employees are allowed to check in until 8:00 am and check out until 3:00 pm.
+- Each employee is expected to have one check-in and one check-out event per day.
+- Double check-in or checkout operations are prevented (Optional feature).
+- Late check-ins after 8:30 am and early check-outs before 3:00 pm are flagged.
+- Flags are justified with reasons (Optional feature).
+- Employees are required to cover 40 hours per week.
+- Email notifications are sent for attendance-related events (simulated, not integrated with an email gateway).
+
+## Required Screens and Actions
+
+### Admin
+
+- **List of Employees**: View a list of all employees.
+- **Manage Employee**: Add, update, or delete employee records.
+
+### Employee
+
+- **View My Attendance**: Access a history of attendance events.
+- **Attendance Check-in**: Log the start of the workday.
+- **Attendance Check-out**: Log the end of the workday.
+- **Write Justification for Attendance Flag**: Provide reasons for flagged attendance events (Optional feature).
+
+## Extra Screens and Actions
+
+### Back-end
+
+- **Authentication**: Secure user authentication.
+- **Logging**: Capture relevant system events for auditing and debugging.
+
+### Front-end
+
+- **Login Page**: Authenticate users before accessing the application.
+- **Authorization**: Control access to different features based on user roles.
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+   ```bash
+   git clone https://github.com/EngYazeedAli/royal_frontend_NextJS.git
+   ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+   ```bash
+   npm install
+   ```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+3. Configure the backend authentication and logging as needed.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+4. Start the application:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```bash
+   npm start
+   ```
 
-## Learn More
+Visit `http://localhost:3000` in your browser to use the application.
 
-To learn more about Next.js, take a look at the following resources:
+## Technologies Used
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [React](https://reactjs.org/) for the front-end.
+- [Next.js](https://nextjs.org/) for server-side rendering.
+- [Node.js](https://nodejs.org/) for the back-end.
