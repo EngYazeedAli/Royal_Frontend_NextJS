@@ -17,7 +17,7 @@ function EmployeeAttendanceScreen({ id }) {
     queryKey: ["user", "get-attendances"],
     queryFn: async () => {
       const response = await fetch(
-        process.env.NEXT_PUBLIC_API_URL +
+        process.env.SERVER_URL +
           "/attendance-records/" +
           id,
         {

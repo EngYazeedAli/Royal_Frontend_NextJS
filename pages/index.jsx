@@ -27,7 +27,7 @@ export default function _() {
   } = useMutation({
     mutationKey: ["login"],
     mutationFn: async () => {
-      const res = await fetch(process.env.NEXT_PUBLIC_API_URL + "/login", {
+      const res = await fetch(process.env.SERVER_URL + "/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -172,7 +172,7 @@ export default function _() {
         const token = session?.token;
 
         const res = await fetch(
-          process.env.NEXT_PUBLIC_API_URL + "/validate-token",
+          process.env.SERVER_URL + "/validate-token",
           {
             method: "POST",
             headers: {
