@@ -74,6 +74,16 @@ This web application is designed to facilitate the management of employee attend
    ```bash
    npm start
    ```
+5. Admin Username:
+   
+   ```bash
+   admin@system.com
+   ```
+7. Admin Password
+
+    ```bash
+   admin@0548
+   ```   
 
 Visit `http://localhost:3000` in your browser to use the application.
 
