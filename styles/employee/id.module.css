@@ -1,0 +1,60 @@
+.main {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    color: #ddd;
+}
+
+.main a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.main a button {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.main .info {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.main .infoWrapper {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.wrapper {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+    align-items: center;
+}
+
+.wrapper p {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.actions button {
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    width: 50%;
+    max-width: 200px;
+}

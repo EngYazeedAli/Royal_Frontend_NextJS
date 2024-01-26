@@ -1,0 +1,16 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    grid: 10px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.main .tr {
+    cursor: pointer;
+}
+
+.main .tr:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 5px 0 rgba(0, 117, 243, 0.144)
+}

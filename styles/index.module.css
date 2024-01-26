@@ -1,0 +1,39 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
+    padding: 40px;
+    color: #aaa;
+  }
+
+  .main h1 {
+    border-bottom: 2px solid #ddd;
+  }
+
+  .main section {
+    border-radius: 20px;
+    /* border: 2px solid #444; */
+    padding: 25px;
+    /* background-color: #444; */
+    width: 100%;
+    max-width: 700px;
+    margin-inline: auto;
+    text-align: start;
+  }
+
+  .main section p {
+    width: 100%;
+  }
+
+  /* .main section:hover {
+    transform: scale(1.01) translateY(-5px);
+  } */
+
+  .main section button{
+    width: 100%;
+    max-width: 200px;
+
+  }

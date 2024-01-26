@@ -1,0 +1,12 @@
+.main {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.main h1 {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: #aaa
+}
