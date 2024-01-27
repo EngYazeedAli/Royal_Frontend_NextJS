@@ -30,7 +30,7 @@ export const getServerSideProps = async (ctx) => {
     try {
         const token = ctx.req.cookies.token;
         const res = await fetch(
-        process.env.SERVER_URL + "/validate-token",
+        process.env.NEXT_PUBLIC_API_URL + "/validate-token",
         {
             method: "POST",
             headers: {

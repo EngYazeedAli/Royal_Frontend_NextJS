@@ -30,7 +30,7 @@ function EmployeeIdScreen({ id }) {
     queryFn: async () => {
       console.log({ session });
       const response = await fetch(
-        process.env.SERVER_URL + "/my_info/" + id,
+        process.env.NEXT_PUBLIC_API_URL + "/my_info/" + id,
         {
           headers: {
             Authorization: `Bearer ${session?.token}`,
@@ -53,7 +53,7 @@ function EmployeeIdScreen({ id }) {
     mutationKey: ["user", "check-attendance"],
     mutationFn: async () => {
       const response = await fetch(
-        process.env.SERVER_URL + "/attendance-record/" + id,
+        process.env.NEXT_PUBLIC_API_URL + "/attendance-record/" + id,
         {
           method: "POST",
           headers: {
@@ -84,7 +84,7 @@ function EmployeeIdScreen({ id }) {
     mutationKey: ["user", "check-in"],
     mutationFn: async (reason) => {
       const response = await fetch(
-        process.env.SERVER_URL + "/check-in/" + id,
+        process.env.NEXT_PUBLIC_API_URL + "/check-in/" + id,
         {
           method: "POST",
           headers: {
@@ -111,7 +111,7 @@ function EmployeeIdScreen({ id }) {
     mutationKey: ["user", "check-out"],
     mutationFn: async (reason) => {
       const response = await fetch(
-        process.env.SERVER_URL + "/check-out/" + id,
+        process.env.NEXT_PUBLIC_API_URL + "/check-out/" + id,
         {
           method: "POST",
           headers: {

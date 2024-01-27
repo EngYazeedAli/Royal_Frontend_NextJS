@@ -26,7 +26,7 @@ function AdminManageEmployeesScreen() {
     queryKey: ["admin", "view-users"],
     queryFn: async () => {
       const response = await fetch(
-        process.env.SERVER_URL + "/users",
+        process.env.NEXT_PUBLIC_API_URL + "/users",
         {
           headers: {
             Authorization: `Bearer ${session?.token}`,
@@ -48,7 +48,7 @@ function AdminManageEmployeesScreen() {
     mutationKey: ["admin", "delete-user"],
     mutationFn: async (id) => {
       const response = await fetch(
-        process.env.SERVER_URL + "/user/" + id,
+        process.env.NEXT_PUBLIC_API_URL + "/user/" + id,
         {
           method: "DELETE",
           headers: {
@@ -84,7 +84,7 @@ function AdminManageEmployeesScreen() {
       console.log({ body });
       try {
         const response = await fetch(
-          process.env.SERVER_URL + "/user",
+          process.env.NEXT_PUBLIC_API_URL + "/user",
           {
             method: "POST",
             headers: {
@@ -118,7 +118,7 @@ function AdminManageEmployeesScreen() {
     }) => {
       console.log({ last_name, password, first_name, email });
       const response = await fetch(
-        process.env.SERVER_URL +
+        process.env.NEXT_PUBLIC_API_URL +
           "/user/" +
           editedEmployee?._id,
         {
