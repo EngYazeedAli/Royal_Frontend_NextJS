@@ -70,18 +70,12 @@ function EmployeeIdScreen({ id }) {
 
 
   React.useEffect(() => {
-    setLoading(isLoading);
-  }, [isLoading, setLoading]);
+    const fetchData = async () => {
+      await refetchCheck();
+    };
 
-  React.useEffect(() => {
-    if (error) {
-      openWarningDialog({
-        title: "Error",
-        content: error.message,
-      });
-    }
-  }, [error, openWarningDialog]);
-
+    fetchData();
+  }, [id, refetchCheck]);
 
   const {
     mutateAsync: checkIn,
