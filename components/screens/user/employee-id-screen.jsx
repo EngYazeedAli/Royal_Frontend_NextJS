@@ -68,15 +68,6 @@ function EmployeeIdScreen({ id }) {
     },
   });
 
-
-  React.useEffect(() => {
-    const fetchData = async () => {
-      await refetchCheck();
-    };
-
-    fetchData();
-  }, [id, refetchCheck]);
-
   const {
     mutateAsync: checkIn,
     isPending: isCheckInPending,
