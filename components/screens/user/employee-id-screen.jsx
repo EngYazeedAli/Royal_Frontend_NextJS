@@ -69,6 +69,20 @@ function EmployeeIdScreen({ id }) {
   });
 
 
+  React.useEffect(() => {
+    setLoading(isLoading);
+  }, [isLoading, setLoading]);
+
+  React.useEffect(() => {
+    if (error) {
+      openWarningDialog({
+        title: "Error",
+        content: error.message,
+      });
+    }
+  }, [error, openWarningDialog]);
+
+
   const {
     mutateAsync: checkIn,
     isPending: isCheckInPending,
