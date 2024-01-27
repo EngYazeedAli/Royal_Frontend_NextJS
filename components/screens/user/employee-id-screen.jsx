@@ -50,7 +50,7 @@ function EmployeeIdScreen({ id }) {
     error: checkError,
     refetch: refetchCheck,
   } = useMutation({
-    mutationKey: ["user", "attendance-record"],
+    mutationKey: ["user", "check-attendance"],
     mutationFn: async () => {
       const response = await fetch(
         process.env.SERVER_URL + "/attendance-record/" + id,
@@ -67,6 +67,14 @@ function EmployeeIdScreen({ id }) {
       return await response.json();
     },
   });
+
+  useEffect(() => {
+    const fetchData = async () => {
+      await refetchCheck();
+    };
+
+    fetchData();
+  }, [id, refetchCheck]);
 
   const {
     mutateAsync: checkIn,
